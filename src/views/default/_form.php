@@ -2,7 +2,7 @@
 
 use powerkernel\tinymce\TinyMce;
 use yii\helpers\Html;
-use common\components\ActiveForm;
+use yozh\form\components\ActiveForm;
 
 /* @var $this yii\web\View */
 /* @var $model common\models\InvestPlan */
@@ -16,7 +16,7 @@ $attributes = $model->attributes;
 	
 	<?php $form = ActiveForm::begin(); ?>
 	
-	<?php $fields = $form->fileds( $model,
+	<?php $fields = $form->fields( $model,
 		method_exists( $model, 'attributeEditList' )
                 ? $model->attributeEditList()
                 : array_keys( $model->attributes ),

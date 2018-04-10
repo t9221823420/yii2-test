@@ -34,7 +34,7 @@ class m000000_000001_yozh_test_table_dev extends Migration
 			'string'  => $this->string(),
 			'boolean' => $this->boolean()->defaultValue( false ),
 			
-			'timestamp' => $this->timestamp()->notNull(),
+			'timestamp' => $this->timestamp(),
 			'datetime'  => $this->dateTime()->notNull(),
 			
 			'enum' => $this->enum( $enum )->notNull()->defaultValue( reset( $enum ) ),

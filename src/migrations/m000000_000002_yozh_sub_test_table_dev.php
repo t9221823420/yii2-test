@@ -2,7 +2,7 @@
 
 use yozh\base\components\Migration;
 use yozh\base\components\db\Schema;
-use yozh\base\components\ArrayHelper as arr;
+use yozh\base\components\ArrayHelper;
 
 /**
  * Class m180305_040759_tablename_table_dev
@@ -38,7 +38,7 @@ class m000000_000002_yozh_sub_test_table_dev extends Migration
 	
 	public function getReferences( $references = [] )
 	{
-		return arr::merge( [
+		return ArrayHelper::merge( [
 			
 			[
 				'refTable'  => 'yozh_test',
