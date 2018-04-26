@@ -17,7 +17,7 @@ class m000000_000001_yozh_test_table_dev extends Migration
 	{
 		
 		parent::safeUp([
-			'mode' => self::ALTER_MODE_UPDATE,
+			'mode' => self::ALTER_MODE_IGNORE,
 		]);
 		
 	}
@@ -43,6 +43,8 @@ class m000000_000001_yozh_test_table_dev extends Migration
 			'text' => $this->text(),
 			'json' => $this->json(),
 			'file' => $this->string( 512 ),
+			
+			'test' => $this->string(),
 		] );
 	}
 	

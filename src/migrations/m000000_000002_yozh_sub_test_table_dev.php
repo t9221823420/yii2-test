@@ -17,9 +17,9 @@ class m000000_000002_yozh_sub_test_table_dev extends Migration
 	public function safeUp( $params = [] )
 	{
 		
-		parent::safeUp([
-			'mode' => self::ALTER_MODE_IGNORE,
-		]);
+		parent::safeUp( [
+			'mode' => self::ALTER_MODE_UPDATE,
+		] );
 		
 	}
 	
@@ -29,10 +29,10 @@ class m000000_000002_yozh_sub_test_table_dev extends Migration
 		$set  = [ 'Zero', 'One', 'Two', 'Three', 'Four', ];
 		
 		return parent::getColumns( [
-			'id' => $this->primaryKey(),
+			'id'               => $this->primaryKey(),
 			'yozh_sub_test_id' => $this->integer(),
-			'value'  => $this->string(),
-			'enabled' => $this->boolean()->defaultValue( false ),
+			'value'            => $this->string(),
+			'enabled'          => $this->boolean()->defaultValue( false ),
 		] );
 	}
 	
@@ -41,11 +41,12 @@ class m000000_000002_yozh_sub_test_table_dev extends Migration
 		return ArrayHelper::merge( [
 			
 			[
-				'refTable'  => 'yozh_test',
-				'refColumn' => 'id',
-				'column'    => 'yozh_sub_test_id',
+				'refTable'   => 'yozh_test',
+				'refColumns' => 'id',
+				'columns'    => 'yozh_sub_test_id',
+				'onDelete'   => self::CONSTRAINTS_ACTION_RESTRICT,
 			],
-			
+		
 		], $references );
 	}
 	
