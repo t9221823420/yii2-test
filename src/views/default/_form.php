@@ -2,13 +2,13 @@
 
 use powerkernel\tinymce\TinyMce;
 use yii\helpers\Html;
-use yozh\form\components\ActiveForm;
+use yozh\form\ActiveForm;
 
 /* @var $this yii\web\View */
-/* @var $model common\models\InvestPlan */
+/* @var $Model common\models\InvestPlan */
 /* @var $form yii\widgets\ActiveForm */
 
-$attributes = $model->attributes;
+$attributes = $Model->attributes;
 
 ?>
 
@@ -16,15 +16,15 @@ $attributes = $model->attributes;
 	
 	<?php $form = ActiveForm::begin(); ?>
 	
-	<?php $fields = $form->fields( $model,
-		method_exists( $model, 'attributeEditList' )
-                ? $model->attributeEditList()
-                : array_keys( $model->attributes ),
-		false
+	<?php $fields = $form->fields( $Model,
+		method_exists( $Model, 'attributesEditList' )
+                ? $Model->attributesEditList()
+			: array_keys( $Model->attributes ),
+		[ 'print' => false, ]
 	);
 	
 	/*
-	$fields['body'] = $form->field( $model, 'body' )->widget(
+	$fields['body'] = $form->field( $Model, 'body' )->widget(
 		TinyMce::className(),
 		[
 			'options' => [

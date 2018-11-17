@@ -1,6 +1,6 @@
 <?php
 
-use yozh\base\components\Migration;
+use yozh\base\components\db\Migration;
 use yozh\base\components\db\Schema;
 
 /**
@@ -17,7 +17,7 @@ class m000000_000001_yozh_test_table_dev extends Migration
 	{
 		
 		parent::safeUp([
-			'mode' => self::ALTER_MODE_IGNORE,
+			'mode' => static::ALTER_MODE_IGNORE,
 		]);
 		
 	}

@@ -1,8 +1,8 @@
 <?php
 
-use yozh\base\components\Migration;
+use yozh\base\components\db\Migration;
 use yozh\base\components\db\Schema;
-use yozh\base\components\ArrayHelper;
+use yozh\base\components\helpers\ArrayHelper;
 
 /**
  * Class m180305_040759_tablename_table_dev
@@ -18,7 +18,7 @@ class m000000_000002_yozh_sub_test_table_dev extends Migration
 	{
 		
 		parent::safeUp( [
-			'mode' => self::ALTER_MODE_UPDATE,
+			'mode' => static::ALTER_MODE_UPDATE,
 		] );
 		
 	}

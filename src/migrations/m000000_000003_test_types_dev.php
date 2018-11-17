@@ -1,9 +1,9 @@
 <?php
 
-use yozh\base\components\Migration;
+use yozh\base\components\db\Migration;
 use backend\modules\helpdesk\models\HelpdeskReply;
 use backend\modules\helpdesk\models\HelpdeskTicket;
-use yozh\base\components\ArrayHelper;
+use yozh\base\components\helpers\ArrayHelper;
 use yii\caching\FileCache;
 
 /**
@@ -16,7 +16,7 @@ class m000000_000003_test_types_dev extends Migration
 	public function safeUp( $params = [] )
 	{
 		parent::safeUp( [
-			'mode' => self::ALTER_MODE_UPDATE,
+			'mode' => static::ALTER_MODE_UPDATE,
 		] );
 		
 	}
