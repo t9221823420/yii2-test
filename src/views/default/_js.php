@@ -11,13 +11,7 @@ use yii\helpers\Url;
 	<?php break; case 'two' : ?>
 	<?php break; default: ?>
 
-    $(function () {
-
-        $(document).on('change', 'select.yozh-nested-select', function () {
-            $($(this).data('selector')).load($(this).attr('url'), 'value=' + $(this).val());
-        });
-
-    });
+    $(function () {});
 	
 	<?php endswitch; ?>
 	<?php if( $printTags ?? false ) : ?></script><?php endif; ?>
