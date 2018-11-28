@@ -7,7 +7,7 @@ use yozh\base\components\helpers\ArrayHelper;
 /**
  * Class m180305_040759_tablename_table_dev
  */
-class m000000_000002_yozh_sub_test_table_dev extends Migration
+class m000000_000000_020_yozh_sub_test_dev extends Migration
 {
 	protected static $_table = 'yozh_sub_test';
 	

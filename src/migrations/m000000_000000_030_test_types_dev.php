@@ -9,7 +9,7 @@ use yii\caching\FileCache;
 /**
  * Class m180301_142414_add_column_to_properties_table
  */
-class m000000_000003_test_types_dev extends Migration
+class m000000_000000_030_test_types_dev extends Migration
 {
 	protected static $_table = 'yozh_test';
 	

@@ -6,7 +6,7 @@ use yozh\base\components\db\Schema;
 /**
  * Class m180305_040759_tablename_table_dev
  */
-class m000000_000001_yozh_test_table_dev extends Migration
+class m000000_000000_010_yozh_test_dev extends Migration
 {
 	protected static $_table = 'yozh_test';
 	
