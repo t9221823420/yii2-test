@@ -15,9 +15,7 @@ class m000000_000000_030_test_types_dev extends Migration
 	
 	public function safeUp( $params = [] )
 	{
-		parent::safeUp( [
-			'mode' => static::ALTER_MODE_UPDATE,
-		] );
+		parent::safeUp( $params );
 		
 	}
 	

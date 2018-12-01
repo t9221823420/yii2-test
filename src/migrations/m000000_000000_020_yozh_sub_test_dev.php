@@ -17,9 +17,7 @@ class m000000_000000_020_yozh_sub_test_dev extends Migration
 	public function safeUp( $params = [] )
 	{
 		
-		parent::safeUp( [
-			'mode' => static::ALTER_MODE_UPDATE,
-		] );
+		parent::safeUp( $params );
 		
 	}
 	
