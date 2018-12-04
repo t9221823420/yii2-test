@@ -17,9 +17,9 @@ $attributes = $Model->attributes;
 	<?php $form = ActiveForm::begin(); ?>
 	
 	<?php $fields = $form->fields( $Model,
-		method_exists( $Model, 'attributesEditList' )
-                ? $Model->attributesEditList()
-			: array_keys( $Model->attributes ),
+		$Model instanceof \yozh\form\interfaces\AttributeActionListInterface
+			? $Model->attributesEditList()
+			: $Model->attributes(),
 		[ 'print' => false, ]
 	);
 	
