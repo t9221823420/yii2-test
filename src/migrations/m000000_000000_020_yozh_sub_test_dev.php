@@ -36,7 +36,7 @@ class m000000_000000_020_yozh_sub_test_dev extends Migration
 	
 	public function getReferences( $references = [] )
 	{
-		return ArrayHelper::merge( [
+		return parent::getReferences( array_merge( [
 			
 			[
 				'refTable'   => 'yozh_test',
@@ -45,7 +45,7 @@ class m000000_000000_020_yozh_sub_test_dev extends Migration
 				'onDelete'   => self::CONSTRAINTS_ACTION_RESTRICT,
 			],
 		
-		], $references );
+		], $references ) );
 	}
 	
 }
