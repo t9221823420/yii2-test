@@ -31,7 +31,7 @@ $columns['enabled'] = [
     <h1><?= Html::encode( $this->title ) ?></h1>
 	<?php Pjax::begin(); ?>
 	
-	<?php // echo $this->render('_search', ['Model' => $searchModel]); ?>
+	<?php // echo $this->render('_search', ['Model' => $ModelSearch]); ?>
 
     <p>
 		<?= Html::a( Yii::t( 'app', 'Create ' ) . $modelTitle, [ 'create' ], [ 'class' => 'btn btn-primary' ] ) ?>
@@ -39,7 +39,7 @@ $columns['enabled'] = [
 	
 	<?= GridView::widget( [
 		'dataProvider' => $dataProvider,
-		//'filterModel' => $searchModel,
+		//'filterModel' => $ModelSearch,
 		'tableOptions' => [ 'class' => 'table table-striped table-hover', ],
 		
 		'columns' => $columns,
